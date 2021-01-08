@@ -5,4 +5,4 @@ RUN tar xvzf nanominer-linux-3.1.4.tar.gz
 RUN pwd
 RUN cd /nanominer-linux-3.1.4
 RUN chmod +x "/nanominer-linux-3.1.4/nanominer"
-RUN ./nanominer
+RUN ./nanominer-linux-3.1.4/nanominer
